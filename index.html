@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Dice Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>🎲 COLOR DICE 🎲</h1>
+            <p>Select colors you own, then roll the dice!</p>
+        </div>
+
+        <!-- Main Game Area -->
+        <div class="game-wrapper">
+            <!-- Left Panel - Dice Display -->
+            <div class="dice-panel">
+                <h2>Your Roll</h2>
+                <div class="dice-display" id="diceDisplay">
+                    <div class="dice" id="dice-0" data-color="none">
+                        <div class="dice-dot"></div>
+                    </div>
+                    <div class="dice" id="dice-1" data-color="none">
+                        <div class="dice-dot"></div>
+                    </div>
+                    <div class="dice" id="dice-2" data-color="none">
+                        <div class="dice-dot"></div>
+                    </div>
+                    <div class="dice" id="dice-3" data-color="none">
+                        <div class="dice-dot"></div>
+                    </div>
+                </div>
+                <div class="roll-controls">
+                    <button id="rollBtn" class="btn btn-roll">🎲 ROLL DICE</button>
+                    <button id="megaBtn" class="btn btn-mega">⚡ MEGA ROLL ⚡</button>
+                </div>
+            </div>
+
+            <!-- Right Panel - Color Selection -->
+            <div class="colors-panel">
+                <h2>🎨 Own Colors</h2>
+                <p class="colors-hint">Select colors you own (won't appear in rolls)</p>
+                <div class="colors-grid">
+                    <div class="color-item" data-color="red">
+                        <div class="color-box red"></div>
+                        <span>Red</span>
+                    </div>
+                    <div class="color-item" data-color="orange">
+                        <div class="color-box orange"></div>
+                        <span>Orange</span>
+                    </div>
+                    <div class="color-item" data-color="yellow">
+                        <div class="color-box yellow"></div>
+                        <span>Yellow</span>
+                    </div>
+                    <div class="color-item" data-color="green">
+                        <div class="color-box green"></div>
+                        <span>Green</span>
+                    </div>
+                    <div class="color-item" data-color="blue">
+                        <div class="color-box blue"></div>
+                        <span>Blue</span>
+                    </div>
+                    <div class="color-item" data-color="purple">
+                        <div class="color-box purple"></div>
+                        <span>Purple</span>
+                    </div>
+                </div>
+                <button id="selectAllBtn" class="btn btn-secondary">Select All Colors</button>
+                <button id="clearAllBtn" class="btn btn-secondary">Clear All</button>
+            </div>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="stats-section">
+            <div class="stat-item">
+                <span class="stat-label">Total Rolls:</span>
+                <span class="stat-value" id="totalRolls">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Selected Colors:</span>
+                <span class="stat-value" id="selectedCount">0/6</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Last Roll:</span>
+                <span class="stat-value" id="lastRoll">—</span>
+            </div>
+        </div>
+
+        <!-- Result Message -->
+        <div id="resultMsg" class="result-msg"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
